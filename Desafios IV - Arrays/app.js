@@ -14,4 +14,5 @@ let yasLikes = ['Luna', 'Bolo', 'Sorvete'];
 let jogadoras = ['Marta', 'Tarciane', 'Jhonson'];
 
 //desafio 6
-let times = ['Corinthians', 'St. Pauli', 'Barcelona']
+
+let times = ['Corinthians', 'St. Pauli', 'Barcelona'];
