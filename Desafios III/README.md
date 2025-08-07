@@ -1,4 +1,4 @@
-Resolução de mais desafios propostos no curso de Funções e Listas em Javascript da trilha inicial do programa ONE, criando funções com parâmetros e retorno!
+Resolução de desafios propostos no curso de Funções e Listas em Javascript da trilha inicial do programa ONE, criando funções com parâmetros por meio de exercícios como cálculo de IMC, conversão de moeda, tabuadas usando for loops e cálculo de áreas e perímetros.
 
 1. Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
 ```JavaScript
