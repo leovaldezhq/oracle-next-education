@@ -90,13 +90,157 @@ public class Main {
 ```
 2. Crie uma classe Animal com um método emitirSom(). Em seguida, crie duas subclasses: Cachorro e Gato, que herdam da classe Animal. Adicione o método emitirSom() nas subclasses, utilizando a anotação @Override para indicar que estão sobrescrevendo o método. Além disso, adicione métodos específicos para cada subclasse, como abanarRabo() para o Cachorro e arranharMoveis() para o Gato.
 ```Java
+// Animal Class
+public class Animal {
 
+    public void makeSound() {
+        System.out.println("Animal's sound");
+    }
+}
+// Dog Class
+public class Dog extends Animal {
+
+    @Override
+    public void makeSound() {
+        System.out.println("Wuff");
+    }
+
+    public void tailWag() {
+        System.out.println("Dog wagging tail");
+    }
+}
+// Cat Class
+public class Cat extends Animal {
+
+    @Override
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+
+    public void scratchFurniture() {
+        System.out.println("Cat scratching furniture");
+    }
+}
+// Main CLass
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.makeSound();
+        dog.tailWag();
+
+        Cat cat = new Cat();
+        cat.makeSound();
+        cat.scratchFurniture();
+    }
+}
 ```
 3. Crie uma classe ContaBancaria com métodos para realizar operações bancárias como depositar(), sacar() e consultarSaldo(). Em seguida, crie uma subclasse ContaCorrente que herda da classe ContaBancaria. Adicione um método específico para a subclasse, como cobrarTarifaMensal(), que desconta uma tarifa mensal da conta corrente.
 ```Java
+// BankAccount Class
+public class BankAccount {
+    protected double balance = 0;
 
+    public void deposit(int amount) {
+        balance += amount;
+        System.out.println("Deposited $ " + amount + ". Current balance is: $ " + balance);
+    }
+
+    public void withdraw(int amount) {
+        if (amount <=  balance) {
+            balance -= amount;
+            System.out.println("Withdrawn $ " + amount + ". Current balance is: $ " + balance);
+        } else {
+            System.out.println("Insufficient funds.");
+        }
+    }
+
+    public void checkBalance() {
+        System.out.println("Balance is $ " + balance);
+    }
+}
+// CheckingAccount Class
+public class CheckingAccount extends BankAccount {
+    private double monthlyFee;
+
+    public void monthlyFee() {
+        balance -= monthlyFee;
+        System.out.println("Monthly fee of " + monthlyFee + " charged. Current balance is: $ " + balance);
+    }
+}
+// Main CLass
+public class Main {
+    public static void main(String[] args) {
+        BankAccount bankAccount = new BankAccount();
+        bankAccount.deposit(1000);
+        bankAccount.checkBalance();
+
+        CheckingAccount checkingAccount = new CheckingAccount();
+        checkingAccount.deposit(500);
+        checkingAccount.monthlyFee();
+        checkingAccount.checkBalance();
+        checkingAccount.withdraw(250);
+        checkingAccount.checkBalance();
+    }
+}
 ```
 4. Crie uma classe NumerosPrimos com métodos como verificarPrimalidade() e listarPrimos(). Em seguida, crie duas subclasses, VerificadorPrimo e GeradorPrimo, que herdam da classe NumerosPrimos. Adicione um método específico para cada uma das subclasses, como verificarSeEhPrimo() para o VerificadorPrimo e gerarProximoPrimo() para o GeradorPrimo. 
 ```Java
+// PrimeNumbers Class
+public class PrimeNumbers {
+    public boolean checkPrimality(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    public void listPrimes(int nLimit) {
+        System.out.println("Prime numbers from 1 to " + (nLimit) +": ");
+        for (int i = 2; i <= nLimit; i++) {
+            if  (checkPrimality(i)) {
+                System.out.println(i);
+            }
+        }
+        System.out.println();
+    }
+}
+//PrimeCheck Class
+public class PrimeCheck extends PrimeNumbers {
+    public void checkIfPrime(int n) {
+        if (checkPrimality(n)) {
+            System.out.println(n + " is a prime number");
+        } else {
+            System.out.println(n + " is not a prime number");
+        }
+    }
+}
+//PrimeGenerator Class
+public class PrimeGenerator extends PrimeNumbers {
+    public int generatePrime(int lastPrime) {
+        int nextNumber = lastPrime + 1;
+        while (!checkPrimality(nextNumber)) {
+            nextNumber++;
+        }
+        return nextNumber;
+    }
+}
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        PrimeCheck check = new PrimeCheck();
+        check.checkIfPrime(7);
+
+        PrimeGenerator generator = new PrimeGenerator();
+        int nextPrime = generator.generatePrime(24);
+        System.out.println("The next prime is " + nextPrime);
+
+        PrimeNumbers primeNumbers = new PrimeNumbers();
+        primeNumbers.listPrimes(nextPrime);
+    }
+}
 ```
