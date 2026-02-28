@@ -1,4 +1,4 @@
-Resolução de desafios propostos no curso de "Java: aplicando a Orientação a Objetos", da trilha de especialização em Back-End do programa ONE, praticando conceitos como Collections.sort,LinkedList, Comparable, compareTo, sort e ArrayLists, para a ordenação eficiente de dados e controle sobre a ordem desejada.
+Resolução de desafios propostos no curso de "Java: trabalhando com listas e coleção de dados", da trilha de especialização em Back-End do programa ONE, praticando conceitos como Collections.sort,LinkedList, Comparable, compareTo, sort e ArrayLists, para a ordenação eficiente de dados e controle sobre a ordem desejada.
 
 1. Crie uma lista de números inteiros e utilize o método Collections.sort para ordená-la em ordem crescente. Em seguida, imprima a lista ordenada.
 ```Java
