@@ -1,4 +1,4 @@
-Resolução de desafios propostos no curso de "Java: aplicando a Orientação a Objetos", da trilha de especialização em Back-End do programa ONE, praticando conceitos como ArrayList e os métodos add, size e get, além do método toString() para visualização de objetos em texto.
+Resolução de desafios propostos no curso de "Java: trabalhando com listas e coleção de dados", da trilha de especialização em Back-End do programa ONE, praticando conceitos como ArrayList e os métodos add, size e get, além do método toString() para visualização de objetos em texto.
 
 1. Crie uma classe Pessoa com atributos como nome, idade, e um método toString que represente esses atributos.
 2. No método main da classe Principal, crie um ArrayList de Pessoa chamado listaDePessoas.
