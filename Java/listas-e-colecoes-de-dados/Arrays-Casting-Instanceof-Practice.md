@@ -1,4 +1,4 @@
-Resolução de desafios propostos no curso de "Java: aplicando a Orientação a Objetos", da trilha de especialização em Back-End do programa ONE, praticando conceitos como ArrayLists, casting de objeto e instanceof.
+Resolução de desafios propostos no curso de "Java: trabalhando com listas e coleção de dados", da trilha de especialização em Back-End do programa ONE, praticando conceitos como ArrayLists, casting de objeto e instanceof.
 
 1. Crie um ArrayList de strings e utilize um loop foreach para percorrer e imprimir cada elemento da lista.
 ```Java
