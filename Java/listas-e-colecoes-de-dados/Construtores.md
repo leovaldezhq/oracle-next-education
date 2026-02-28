@@ -1,4 +1,4 @@
-Resolução de desafios propostos no curso de "Java: aplicando a Orientação a Objetos", da trilha de especialização em Back-End do programa ONE, praticando a utilização de construtores e ArrayLists.
+Resolução de desafios propostos no curso de "Java: trabalhando com listas e coleção de dados", da trilha de especialização em Back-End do programa ONE, praticando a utilização de construtores e ArrayLists.
 
 1. Crie uma classe Produto com atributos como nome, preco, e quantidade. Em seguida, crie uma lista de objetos Produto utilizando a classe ArrayList. Adicione alguns produtos, imprima o tamanho da lista e recupere um produto pelo índice.
 2. Implemente o método toString() na classe Produto para retornar uma representação em texto do objeto. Em seguida, imprima a lista de produtos utilizando o método System.out.println().
